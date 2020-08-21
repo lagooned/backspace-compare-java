@@ -17,4 +17,10 @@ public class AppShould {
         assertThat(actual, is(true));
     }
 
+    @Test
+    void compareTwoStringsWithConsecuitiveBackspaceCharacters() {
+        Boolean actual = stringwithbackspacescomparitor.compare("ab\b\bc", "c");
+        assertThat(actual, is(true));
+    }
+
 }
