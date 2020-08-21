@@ -9,9 +9,12 @@ import org.junit.jupiter.api.Test;
 
 public class AppShould {
 
+    StringWithBackspacesComparitor stringwithbackspacescomparitor = new StringWithBackspacesComparitor();
+
     @Test
-    void add_two_numbers() {
-        assertThat(1 + 1, is(equalTo(2)));
+    void compareTwoStringsWithBackspaceCharacters() {
+        Boolean actual = stringwithbackspacescomparitor.compare("ab\bc", "ac");
+        assertThat(actual, is(true));
     }
 
 }
