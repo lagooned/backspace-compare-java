@@ -23,4 +23,10 @@ public class AppShould {
         assertThat(actual, is(true));
     }
 
+    @Test
+    void compareTwoStringsWithStringsThatBackspacePastBeginningOfBuffer() {
+        Boolean actual = stringwithbackspacescomparitor.compare("\ba\bc", "a\b\bc");
+        assertThat(actual, is(true));
+    }
+
 }
